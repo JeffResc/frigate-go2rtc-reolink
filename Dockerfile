@@ -6,7 +6,7 @@
 # unmerged go2rtc PR (AlexxIT/go2rtc#2263), head fzurita/go2rtc@reolink_protocol.
 # Pinned to a commit, not the branch head, since the branch will keep moving.
 # Bump GO2RTC_COMMIT manually if the PR is updated; see README.md.
-FROM golang:1.24-alpine AS go2rtc-build
+FROM golang:1.27-alpine AS go2rtc-build
 RUN apk add --no-cache git
 ARG GO2RTC_COMMIT=a30b9d3f1a10e75431529151f291ea0d96668bf7
 RUN git clone https://github.com/fzurita/go2rtc.git /src \

@@ -14,5 +14,5 @@ RUN git clone https://github.com/fzurita/go2rtc.git /src \
 WORKDIR /src
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -ldflags "-s -w" -trimpath -o /go2rtc .
 
-FROM ghcr.io/blakeblackshear/frigate:0.18.0
+FROM ghcr.io/blakeblackshear/frigate:0.18.2
 COPY --from=go2rtc-build /go2rtc /usr/local/go2rtc/bin/go2rtc
